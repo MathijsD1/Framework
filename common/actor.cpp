@@ -7,5 +7,5 @@ void Actor::addSprite(Sprite* sprite)
 
 void Actor::update() 
 {
-
+	
 }

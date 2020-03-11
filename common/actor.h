@@ -2,6 +2,7 @@
 #define ACTOR_H
 
 #include <common/sprite.h>
+#include <common/time.h>
 #include <common/vectorx.h>
 #include <vector>
 

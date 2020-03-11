@@ -22,6 +22,9 @@ Core::~Core()
 {
 	// Delete the renderer
 	delete _renderer;
+
+	// Delete the Time instance
+	delete Time::getInstance();
 }
 
 void Core::run() 

@@ -5,6 +5,16 @@ class Time
 {
 public:
 	/**
+	*  Time constructor.
+	*/
+	Time();
+
+	/**
+	*  Time deconstructor.
+	*/
+	~Time();
+
+	/**
 	*  Getter of the Time instance.
 	*/
 	static Time* getInstance();

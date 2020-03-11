@@ -2,8 +2,19 @@
 #include <GLFW/glfw3.h>
 
 #include <common/time.h>
+#include <iostream>
 
 Time* Time::_instance = 0;
+
+Time::Time() 
+{
+	std::cout << "Constructed new Time Instance" << std::endl;
+}
+
+Time::~Time() 
+{
+	std::cout << "Deconstructed Time Instance" << std::endl;
+}
 
 Time* Time::getInstance()
 {
