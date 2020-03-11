@@ -9,6 +9,7 @@ class Actor
 public:
 	void addSprite(Sprite* sprite);
 	std::vector<Actor*>& getChildren() { return _children; }
+	virtual void update();
 private:
 	Sprite* _sprite;
 	std::vector<Actor*> _children;

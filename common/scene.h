@@ -1,7 +1,9 @@
 #ifndef SCENE_H
 #define SCENE_H
 
-class Scene
+#include <common/actor.h>
+
+class Scene : Actor
 {
 
 };
