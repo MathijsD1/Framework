@@ -95,3 +95,23 @@ file(
 	COPY common/shaders
 	DESTINATION ${CMAKE_BINARY_DIR}
 )
+
+# Game
+add_executable(game # g++ game/game.cpp -o game
+	game/game.cpp
+)
+target_link_libraries(game # g++ -lcommon
+	common
+	${ALL_GRAPHICS_LIBS}
+)
+# Copy assets and shaders to the build directory
+# (In Visual Studio, copy these directories to either 'Release' or 'Build')
+file(
+	COPY game/assets
+	DESTINATION ${CMAKE_BINARY_DIR}
+)
+file(
+	COPY common/shaders
+	DESTINATION ${CMAKE_BINARY_DIR}
+)
+

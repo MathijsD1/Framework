@@ -1,0 +1,10 @@
+// Include GLEW
+#include <GL/glew.h>
+
+// Include GLFW
+#include <GLFW/glfw3.h>
+
+int main( void )
+{
+	return 0;
+}
