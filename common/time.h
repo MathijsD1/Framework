@@ -4,11 +4,29 @@
 class Time
 {
 public:
+	/**
+	*  Getter of the Time instance.
+	*/
 	static Time* getInstance();
+
+	/**
+	*  Updates the current Delta Time.
+	*/
 	float updateDeltaTime();
+
+	/**
+	*  Getter of the current Delta Time.
+	*/
 	float getDeltaTime() { return _deltaTime; }
 private:
+	/**
+	*  Singleton Time instance.
+	*/
 	static Time* _instance;
+
+	/**
+	*  Current Delta Time
+	*/
 	float _deltaTime = 0;
 };
 
