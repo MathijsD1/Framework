@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['getchildren_8',['getChildren',['../classActor.html#a0990a84a4733b441430f6d7326cab558',1,'Actor']]],
-  ['getdeltatime_9',['getDeltaTime',['../classTime.html#a405c7642c4ba0ee719a8d0491099102a',1,'Time']]],
-  ['getinstance_10',['getInstance',['../classTime.html#a44bef0a0a824f7ce7cae88a9c9a382e8',1,'Time']]],
-  ['getrenderer_11',['getRenderer',['../classCore.html#a844e2da329d6a9638f7995bf150f6929',1,'Core']]]
+  ['deg_5fto_5frad_11',['DEG_TO_RAD',['../vectorx_8h.html#aab4087f865137a540e6885dda23341cc',1,'vectorx.h']]],
+  ['dot_12',['dot',['../classVectorX__t.html#a47edb26aa302ab3611ec850f56b1a0f0',1,'VectorX_t']]]
 ];

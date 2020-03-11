@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['update_18',['update',['../classActor.html#af10d6f5b2ce4f5ab7a43c813b8b5bf95',1,'Actor']]],
-  ['updatedeltatime_19',['updateDeltaTime',['../classTime.html#a6ce3979f467a68255a1b8d87e57e5a73',1,'Time']]]
+  ['lerp_28',['lerp',['../classVectorX__t.html#abf57f54eabe52a159804689ccd80b9c4',1,'VectorX_t']]],
+  ['limit_29',['limit',['../classVectorX__t.html#a2a4914eef4789c14c1c78b235b298565',1,'VectorX_t']]]
 ];

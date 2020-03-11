@@ -2,6 +2,7 @@
 #define ACTOR_H
 
 #include <common/sprite.h>
+#include <common/vectorx.h>
 #include <vector>
 
 class Actor
@@ -21,6 +22,21 @@ public:
 	*  Update method which is called every frame (In the future).
 	*/
 	virtual void update();
+
+	/**
+	*  Scale of this Actor.
+	*/
+	Vector2 scale;
+
+	/**
+	*  Position of this Actor.
+	*/
+	Vector2 position;
+
+	/**
+	*  Rotation of this Actor.
+	*/
+	float rotation = 0;
 private:
 	/**
 	*  Sprite of this Actor.

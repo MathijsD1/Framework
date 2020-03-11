@@ -73,34 +73,46 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ACTOR_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;common/sprite.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classActor.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classActor.html">Actor</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classActor.html#af638cc749238f87426fe650be0fd85fa">addSprite</a>(<a class="code" href="classSprite.html">Sprite</a>* sprite);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classActor.html#a0990a84a4733b441430f6d7326cab558">   18</a></span>&#160;    std::vector&lt;Actor*&gt;&amp; <a class="code" href="classActor.html#a0990a84a4733b441430f6d7326cab558">getChildren</a>() { <span class="keywordflow">return</span> <a class="code" href="classActor.html#ab2e4f883ebafac06ff2fd553c26b59e0">_children</a>; }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classActor.html#af10d6f5b2ce4f5ab7a43c813b8b5bf95">update</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classActor.html#a44e83fd05944295b3c17b6dbe39f2aab">   28</a></span>&#160;    <a class="code" href="classSprite.html">Sprite</a>* <a class="code" href="classActor.html#a44e83fd05944295b3c17b6dbe39f2aab">_sprite</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classActor.html#ab2e4f883ebafac06ff2fd553c26b59e0">   33</a></span>&#160;    std::vector&lt;Actor*&gt; <a class="code" href="classActor.html#ab2e4f883ebafac06ff2fd553c26b59e0">_children</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="vectorx_8h.html">common/vectorx.h</a>&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classActor.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classActor.html">Actor</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classActor.html#af638cc749238f87426fe650be0fd85fa">addSprite</a>(<a class="code" href="classSprite.html">Sprite</a>* sprite);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classActor.html#a0990a84a4733b441430f6d7326cab558">   19</a></span>&#160;    std::vector&lt;Actor*&gt;&amp; <a class="code" href="classActor.html#a0990a84a4733b441430f6d7326cab558">getChildren</a>() { <span class="keywordflow">return</span> <a class="code" href="classActor.html#ab2e4f883ebafac06ff2fd553c26b59e0">_children</a>; }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classActor.html#af10d6f5b2ce4f5ab7a43c813b8b5bf95">update</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classActor.html#a112a04661060b6b0262b90c8c9f5b599">   29</a></span>&#160;    <a class="code" href="classVectorX__t.html">Vector2</a> <a class="code" href="classActor.html#a112a04661060b6b0262b90c8c9f5b599">scale</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classActor.html#ac50766040ecd3bb807af4d111a49bb02">   34</a></span>&#160;    <a class="code" href="classVectorX__t.html">Vector2</a> <a class="code" href="classActor.html#ac50766040ecd3bb807af4d111a49bb02">position</a>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classActor.html#a1de75b365ef500e50814a9e5cc879d1b">   39</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classActor.html#a1de75b365ef500e50814a9e5cc879d1b">rotation</a> = 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classActor.html#a44e83fd05944295b3c17b6dbe39f2aab">   44</a></span>&#160;    <a class="code" href="classSprite.html">Sprite</a>* <a class="code" href="classActor.html#a44e83fd05944295b3c17b6dbe39f2aab">_sprite</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classActor.html#ab2e4f883ebafac06ff2fd553c26b59e0">   49</a></span>&#160;    std::vector&lt;Actor*&gt; <a class="code" href="classActor.html#ab2e4f883ebafac06ff2fd553c26b59e0">_children</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassVectorX__t_html"><div class="ttname"><a href="classVectorX__t.html">VectorX_t</a></div><div class="ttdoc">A helper class to calculate distances and angles.</div><div class="ttdef"><b>Definition:</b> vectorx.h:57</div></div>
+<div class="ttc" id="aclassActor_html_ac50766040ecd3bb807af4d111a49bb02"><div class="ttname"><a href="classActor.html#ac50766040ecd3bb807af4d111a49bb02">Actor::position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdef"><b>Definition:</b> actor.h:34</div></div>
+<div class="ttc" id="aclassActor_html_a112a04661060b6b0262b90c8c9f5b599"><div class="ttname"><a href="classActor.html#a112a04661060b6b0262b90c8c9f5b599">Actor::scale</a></div><div class="ttdeci">Vector2 scale</div><div class="ttdef"><b>Definition:</b> actor.h:29</div></div>
 <div class="ttc" id="aclassSprite_html"><div class="ttname"><a href="classSprite.html">Sprite</a></div><div class="ttdef"><b>Definition:</b> sprite.h:8</div></div>
-<div class="ttc" id="aclassActor_html"><div class="ttname"><a href="classActor.html">Actor</a></div><div class="ttdef"><b>Definition:</b> actor.h:7</div></div>
-<div class="ttc" id="aclassActor_html_a0990a84a4733b441430f6d7326cab558"><div class="ttname"><a href="classActor.html#a0990a84a4733b441430f6d7326cab558">Actor::getChildren</a></div><div class="ttdeci">std::vector&lt; Actor * &gt; &amp; getChildren()</div><div class="ttdef"><b>Definition:</b> actor.h:18</div></div>
-<div class="ttc" id="aclassActor_html_a44e83fd05944295b3c17b6dbe39f2aab"><div class="ttname"><a href="classActor.html#a44e83fd05944295b3c17b6dbe39f2aab">Actor::_sprite</a></div><div class="ttdeci">Sprite * _sprite</div><div class="ttdef"><b>Definition:</b> actor.h:28</div></div>
+<div class="ttc" id="aclassActor_html"><div class="ttname"><a href="classActor.html">Actor</a></div><div class="ttdef"><b>Definition:</b> actor.h:8</div></div>
+<div class="ttc" id="avectorx_8h_html"><div class="ttname"><a href="vectorx_8h.html">vectorx.h</a></div><div class="ttdoc">The VectorX_t header file.</div></div>
+<div class="ttc" id="aclassActor_html_a0990a84a4733b441430f6d7326cab558"><div class="ttname"><a href="classActor.html#a0990a84a4733b441430f6d7326cab558">Actor::getChildren</a></div><div class="ttdeci">std::vector&lt; Actor * &gt; &amp; getChildren()</div><div class="ttdef"><b>Definition:</b> actor.h:19</div></div>
+<div class="ttc" id="aclassActor_html_a1de75b365ef500e50814a9e5cc879d1b"><div class="ttname"><a href="classActor.html#a1de75b365ef500e50814a9e5cc879d1b">Actor::rotation</a></div><div class="ttdeci">float rotation</div><div class="ttdef"><b>Definition:</b> actor.h:39</div></div>
+<div class="ttc" id="aclassActor_html_a44e83fd05944295b3c17b6dbe39f2aab"><div class="ttname"><a href="classActor.html#a44e83fd05944295b3c17b6dbe39f2aab">Actor::_sprite</a></div><div class="ttdeci">Sprite * _sprite</div><div class="ttdef"><b>Definition:</b> actor.h:44</div></div>
 <div class="ttc" id="aclassActor_html_af638cc749238f87426fe650be0fd85fa"><div class="ttname"><a href="classActor.html#af638cc749238f87426fe650be0fd85fa">Actor::addSprite</a></div><div class="ttdeci">void addSprite(Sprite *sprite)</div><div class="ttdef"><b>Definition:</b> actor.cpp:3</div></div>
-<div class="ttc" id="aclassActor_html_ab2e4f883ebafac06ff2fd553c26b59e0"><div class="ttname"><a href="classActor.html#ab2e4f883ebafac06ff2fd553c26b59e0">Actor::_children</a></div><div class="ttdeci">std::vector&lt; Actor * &gt; _children</div><div class="ttdef"><b>Definition:</b> actor.h:33</div></div>
+<div class="ttc" id="aclassActor_html_ab2e4f883ebafac06ff2fd553c26b59e0"><div class="ttname"><a href="classActor.html#ab2e4f883ebafac06ff2fd553c26b59e0">Actor::_children</a></div><div class="ttdeci">std::vector&lt; Actor * &gt; _children</div><div class="ttdef"><b>Definition:</b> actor.h:49</div></div>
 <div class="ttc" id="aclassActor_html_af10d6f5b2ce4f5ab7a43c813b8b5bf95"><div class="ttname"><a href="classActor.html#af10d6f5b2ce4f5ab7a43c813b8b5bf95">Actor::update</a></div><div class="ttdeci">virtual void update()</div><div class="ttdef"><b>Definition:</b> actor.cpp:8</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 11 2020 10:14:33 for Custom Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 11 2020 10:26:07 for Custom Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.16
 </small></address>

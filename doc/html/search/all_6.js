@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['scene_15',['Scene',['../classScene.html',1,'']]],
-  ['sprite_16',['Sprite',['../classSprite.html',1,'']]]
+  ['half_5fpi_26',['HALF_PI',['../vectorx_8h.html#ae7728bad6b86aebd3270b35b5faa4847',1,'vectorx.h']]]
 ];

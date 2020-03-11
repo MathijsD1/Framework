@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['isrunning_42',['isRunning',['../classCore.html#a363feff139d9fe4e22bdc71a4fd0ed00',1,'Core']]]
+  ['angle_167',['angle',['../classPolar__t.html#a97c5268b13511ac64a7650adc36554cb',1,'Polar_t']]]
 ];

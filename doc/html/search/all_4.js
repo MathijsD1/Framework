@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['isrunning_12',['isRunning',['../classCore.html#a363feff139d9fe4e22bdc71a4fd0ed00',1,'Core']]]
+  ['fromcartesian_13',['fromCartesian',['../classPolar__t.html#a7a7ea302869a50342c010083943a2dbc',1,'Polar_t::fromCartesian(const VectorX_t&lt; T &gt; &amp;vec)'],['../classPolar__t.html#a18fa5c39eddf7f3554ddcec7ea95eb27',1,'Polar_t::fromCartesian(T x, T y)']]]
 ];

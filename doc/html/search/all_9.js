@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7ecore_20',['~Core',['../classCore.html#a776f8c46504b14183883c6273f93eaed',1,'Core']]]
+  ['normalize_30',['normalize',['../classVectorX__t.html#a11fc8d9232f89ad0b572fcaff6895814',1,'VectorX_t']]]
 ];
