@@ -8,8 +8,12 @@ class Core
 public:
 	Core();
 	~Core();
+
 	void run();
+
 	Renderer* getRenderer() { return _renderer; }
+
+	bool isRunning = true;
 private:
 	Renderer* _renderer = 0;
 };
