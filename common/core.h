@@ -8,6 +8,7 @@ class Core
 public:
 	Core();
 	~Core();
+	void run();
 	Renderer* getRenderer() { return _renderer; }
 private:
 	Renderer* _renderer = 0;
