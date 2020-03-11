@@ -75,6 +75,8 @@ add_library(common # ar rcs libcommon.a
 	common/actor.cpp
 	common/scene.h
 	common/scene.cpp
+	common/time.h
+	common/time.cpp
 )
 
 # Demo

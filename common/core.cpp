@@ -6,6 +6,8 @@
 
 #include <common/core.h>
 #include <common/camera.h>
+#include <common/time.h>
+#include <iostream>
 
 Core::Core() 
 {
@@ -25,7 +27,10 @@ Core::~Core()
 void Core::run() 
 {
 	// Update the Delta Time
-	float deltaTime = _renderer->updateDeltaTime();
+	Time::getInstance()->updateDeltaTime();
+
+	// Get the Delta Time
+	float deltaTime = Time::getInstance()->getDeltaTime();
 
 	// Compute Matrices
 	computeMatricesFromInputs(_renderer->window(), deltaTime);

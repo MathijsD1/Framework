@@ -23,8 +23,6 @@ class Renderer
 		unsigned int width() { return _window_width; };
 		unsigned int height() { return _window_height; };
 
-		float updateDeltaTime();
-
 	private:
 		int init();
 

@@ -74,19 +74,6 @@ int Renderer::init()
 	return 0;
 }
 
-float Renderer::updateDeltaTime() {
-	// lastTime is initialised only the first time this function is called
-	static double lastTime = glfwGetTime();
-	// get the current time
-	double currentTime = glfwGetTime();
-
-	// Compute time difference between current and last time
-	float deltaTime = float(currentTime - lastTime);
-
-	// For the next frame, the "last time" will be "now"
-	lastTime = currentTime;
-	return deltaTime;
-}
 
 void Renderer::renderSprite(Sprite* sprite, float px, float py, float sx, float sy, float rot)
 {
