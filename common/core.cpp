@@ -7,12 +7,14 @@
 #include <common/core.h>
 #include <common/camera.h>
 #include <common/time.h>
+#include <common/config.h>
+
 #include <iostream>
 
 Core::Core() 
 {
 	// Create a new Renderer
-	_renderer = new Renderer(1280, 720);
+	_renderer = new Renderer(SCREENWIDTH, SCREENHEIGHT);
 
 	// Is the core doing something?
 	isRunning = true;

@@ -3,7 +3,9 @@
 
 #include <common/sprite.h>
 #include <common/time.h>
+#include <common/config.h>
 #include <common/vectorx.h>
+
 #include <vector>
 
 class Actor

@@ -79,6 +79,7 @@ add_library(common # ar rcs libcommon.a
 	common/time.cpp
 	common/pointx.h
 	common/vectorx.h
+	common/config.h
 )
 
 # Demo
