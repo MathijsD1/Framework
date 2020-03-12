@@ -143,11 +143,11 @@ void Renderer::_renderActor(Actor* actor)
 {
 	if (actor->getSprite() != nullptr) 
 	{
-		renderSprite(actor->getSprite(), 300, 300, 1, 1, actor->rotation);
+		renderSprite(actor->getSprite(), actor->position.x, actor->position.y, actor->scale.x, actor->scale.y, actor->rotation);
 	}
-
+	
 	// Render all Children (recursively)
-	std::vector<Actor*> children = actor->getChildren();
+	std::vector<Actor*> children = actor->children();
 	std::vector<Actor*>::iterator child;
 	for (child = children.begin(); child != children.end(); child++) {
 		this->_renderActor(*child);
