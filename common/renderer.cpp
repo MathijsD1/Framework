@@ -135,6 +135,7 @@ void Renderer::renderSprite(Sprite* sprite, float px, float py, float sx, float 
 
 void Renderer::renderScene(Scene* scene) 
 {
+	// Render the Scene
 	_renderActor(scene);
 }
 

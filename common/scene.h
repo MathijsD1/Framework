@@ -5,7 +5,10 @@
 
 class Scene : public Actor
 {
-
+public:
+	void updateScene();
+private:
+	void _updateActor(Actor* actor);
 };
 
 #endif

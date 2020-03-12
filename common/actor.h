@@ -25,9 +25,9 @@ public:
 	std::vector<Actor*>& getChildren() { return _children; }
 
 	/**
-	*  Update method which is called every frame (In the future).
+	*  Update method which is called every frame.
 	*/
-	virtual void update();
+	virtual void update() = 0;
 
 	/**
 	*  Scale of this Actor.

@@ -8,6 +8,7 @@ class GameScene : public Scene
 {
 public:
 	GameScene();
+	virtual void update();
 };
 
 #endif
