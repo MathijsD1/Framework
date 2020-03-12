@@ -6,6 +6,7 @@
 #include <common/config.h>
 #include <common/vectorx.h>
 
+#include <string>
 #include <vector>
 
 class Actor
@@ -17,9 +18,9 @@ public:
 	Actor();
 
 	/**
-	*  Adds a sprite to the Actor.
+	*  Adds a sprite to the Actor and sets the filter mode. 
 	*/
-	void addSprite(Sprite* sprite);
+	void addSprite(std::string path, int filterMode = 1);
 
 	/**
 	*  Getter of the sprite of the Actor.

@@ -6,8 +6,14 @@
 class Scene : public Actor
 {
 public:
+	/**
+	*  Updates the Scene and all Actors within.
+	*/
 	void updateScene();
 private:
+	/**
+	*  Updates a Actor and all children within.
+	*/
 	void _updateActor(Actor* actor);
 };
 

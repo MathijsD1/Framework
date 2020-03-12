@@ -2,7 +2,7 @@
 
 Ghost::Ghost() 
 {
-	this->addSprite(new Sprite("assets/kingkong.tga"));
+	this->addSprite("assets/kingkong.tga", 1);
 
 	this->position = Vector2(SCREENWIDTH / 2, SCREENHEIGHT / 2);
 	this->scale = Vector2(1, 1);
@@ -10,5 +10,5 @@ Ghost::Ghost()
 }
 
 void Ghost::update() {
-	this->scale += Vector2(0.01, 0.01f) * Time::deltaTime();
+	this->scale += Vector2(0.1f, 0.1f) * Time::deltaTime();
 }

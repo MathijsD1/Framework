@@ -16,9 +16,17 @@ Actor::Actor()
 	_sprite = nullptr;
 }
 
-void Actor::addSprite(Sprite* sprite) 
+void Actor::addSprite(std::string path, int filterMode) 
 {
+	if (_sprite != nullptr) 
+	{
+		delete _sprite;
+	}
+
+	Sprite* sprite = new Sprite(path);
 	this->_sprite = sprite;
+
+	this->_sprite->setFilter(filterMode);
 }
 
 void Actor::addChild(Actor* child)
