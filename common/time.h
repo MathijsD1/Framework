@@ -27,7 +27,7 @@ public:
 	/**
 	*  Getter of the current Delta Time.
 	*/
-	float getDeltaTime() { return _deltaTime; }
+	static float deltaTime() { return getInstance()->_deltaTime; }
 private:
 	/**
 	*  Singleton Time instance.

@@ -10,5 +10,5 @@ Ghost::Ghost()
 }
 
 void Ghost::update() {
-	this->scale += Vector2(0.01, 0.01f);
+	this->scale += Vector2(0.01, 0.01f) * Time::deltaTime();
 }

@@ -38,7 +38,7 @@ void Core::run(Scene* scene)
 	Time::getInstance()->updateDeltaTime();
 
 	// Get the Delta Time
-	float deltaTime = Time::getInstance()->getDeltaTime();
+	float deltaTime = Time::deltaTime();
 
 	// Compute Matrices
 	computeMatricesFromInputs(_renderer->window(), deltaTime);
