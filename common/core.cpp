@@ -27,7 +27,7 @@ Core::~Core()
 	delete Time::getInstance();
 }
 
-void Core::run() 
+void Core::run(Scene* scene) 
 {
 	// Update the Delta Time
 	Time::getInstance()->updateDeltaTime();
@@ -40,6 +40,8 @@ void Core::run()
 
 	// Clear Screen
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	_renderer->renderScene(scene);
 
 	// Swap Buffers
 	glfwSwapBuffers(_renderer->window());

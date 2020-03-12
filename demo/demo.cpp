@@ -9,7 +9,7 @@
 #include <common/sprite.h>
 
 int main( void )
-{
+{/*
 	Renderer renderer(1280, 720);
 
 	Sprite* pencils = new Sprite("assets/pencils.tga");
@@ -50,6 +50,6 @@ int main( void )
 
 	// Close OpenGL window and terminate GLFW
 	glfwTerminate();
-
+	*/
 	return 0;
 }

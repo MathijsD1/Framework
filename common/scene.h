@@ -3,7 +3,7 @@
 
 #include <common/actor.h>
 
-class Scene : Actor
+class Scene : public Actor
 {
 
 };

@@ -15,6 +15,11 @@ public:
 	void addSprite(Sprite* sprite);
 
 	/**
+	*  Adds a sprite to the Actor.
+	*/
+	Sprite* getSprite() { return _sprite; }
+
+	/**
 	*  Getter of the children of this Actor.
 	*/
 	std::vector<Actor*>& getChildren() { return _children; }
@@ -42,7 +47,7 @@ private:
 	/**
 	*  Sprite of this Actor.
 	*/
-	Sprite* _sprite;
+	Sprite* _sprite = 0;
 
 	/**
 	*  Children of this Actor.

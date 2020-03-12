@@ -103,6 +103,8 @@ file(
 # Game
 add_executable(game # g++ game/game.cpp -o game
 	game/game.cpp
+	game/gamescene.h
+	game/gamescene.cpp
 )
 target_link_libraries(game # g++ -lcommon
 	common

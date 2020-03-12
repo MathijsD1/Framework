@@ -2,6 +2,7 @@
 #define CORE_H
 
 #include <common/renderer.h>
+#include <common/scene.h>
 
 class Core
 {
@@ -19,7 +20,7 @@ public:
 	/**
 	*  Updates the screen and in the future the scene with all Actors.
 	*/
-	void run();
+	void run(Scene* scene);
 
 	/**
 	*  Getter of the Renderer.

@@ -1,9 +1,13 @@
 #ifndef GAMESCENE_H
 #define GAMESCENE_H
 
-class GameScene : Scene
-{
+#include <common/scene.h>
+#include <common/actor.h>
 
+class GameScene : public Scene
+{
+public:
+	GameScene();
 };
 
 #endif

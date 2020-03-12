@@ -133,6 +133,26 @@ void Renderer::renderSprite(Sprite* sprite, float px, float py, float sx, float 
 	glDisableVertexAttribArray(vertexUVID);
 }
 
+void Renderer::renderScene(Scene* scene) 
+{
+	_renderActor(scene);
+}
+
+void Renderer::_renderActor(Actor* actor) 
+{
+	if (actor->getSprite() != nullptr) 
+	{
+		renderSprite(actor->getSprite(), 300, 300, 1, 1, actor->rotation);
+	}
+
+	// Render all Children (recursively)
+	std::vector<Actor*> children = actor->getChildren();
+	std::vector<Actor*>::iterator child;
+	for (child = children.begin(); child != children.end(); child++) {
+		this->_renderActor(*child);
+	}
+}
+
 GLuint Renderer::loadShaders(const std::string& vertex_file_path, const std::string& fragment_file_path)
 {
 	// Create the shaders
