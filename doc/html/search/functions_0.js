@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['addsprite_111',['addSprite',['../classActor.html#af638cc749238f87426fe650be0fd85fa',1,'Actor']]]
+  ['_5fupdateactor_128',['_updateActor',['../classScene.html#a652d098e90850d5ae8d74a441dfbc94f',1,'Scene']]]
 ];

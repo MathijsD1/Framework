@@ -79,33 +79,46 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classSprite.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSprite.html">Sprite</a></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="classSprite.html">Sprite</a>(<span class="keyword">const</span> std::string&amp; imagepath);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classSprite.html">Sprite</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        GLuint texture() { <span class="keywordflow">return</span> _texture; };</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        GLuint vertexbuffer() { <span class="keywordflow">return</span> _vertexbuffer; };</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        GLuint uvbuffer() { <span class="keywordflow">return</span> _uvbuffer; };</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width() { <span class="keywordflow">return</span> _width; };</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height() { <span class="keywordflow">return</span> _height; };</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        GLuint loadTGA(<span class="keyword">const</span> std::string&amp; imagepath);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        GLuint _texture;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        GLuint _vertexbuffer;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        GLuint _uvbuffer;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _width;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _height;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SPRITE_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="classSprite.html#a32ce2f340cf12e70f939704d04a55362">Sprite</a>(<span class="keyword">const</span> std::string&amp; imagepath);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classSprite.html#a8accab430f9d90ae5117b57d67e32b84">~Sprite</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classSprite.html#a68cf0df5978deb9e49c6b32f53e632b6">   23</a></span>&#160;        GLuint <a class="code" href="classSprite.html#a68cf0df5978deb9e49c6b32f53e632b6">texture</a>() { <span class="keywordflow">return</span> _texture; };</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classSprite.html#af1cfac240657d173ffcc469ffa718515">   27</a></span>&#160;        GLuint <a class="code" href="classSprite.html#af1cfac240657d173ffcc469ffa718515">vertexbuffer</a>() { <span class="keywordflow">return</span> _vertexbuffer; };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classSprite.html#a542bde2c43fee753e529ee95dcf565a3">   32</a></span>&#160;        GLuint <a class="code" href="classSprite.html#a542bde2c43fee753e529ee95dcf565a3">uvbuffer</a>() { <span class="keywordflow">return</span> _uvbuffer; };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classSprite.html#a52c00b18eacd2808f5457149ed76b192">   37</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classSprite.html#a52c00b18eacd2808f5457149ed76b192">width</a>() { <span class="keywordflow">return</span> _width; };</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classSprite.html#ab4cf3eeada477720262603cb6d07634c">   42</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classSprite.html#ab4cf3eeada477720262603cb6d07634c">height</a>() { <span class="keywordflow">return</span> _height; };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classSprite.html#acf38f5574ee33995fb4537b3dc9c8b41">setFilter</a>(<span class="keywordtype">int</span> filterMode);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        GLuint loadTGA(<span class="keyword">const</span> std::string&amp; imagepath);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        GLuint _texture;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        GLuint _vertexbuffer;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        GLuint _uvbuffer;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _width;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _height;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">int</span> _filter = 1;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SPRITE_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassSprite_html_acf38f5574ee33995fb4537b3dc9c8b41"><div class="ttname"><a href="classSprite.html#acf38f5574ee33995fb4537b3dc9c8b41">Sprite::setFilter</a></div><div class="ttdeci">void setFilter(int filterMode)</div><div class="ttdef"><b>Definition:</b> sprite.cpp:60</div></div>
 <div class="ttc" id="aclassSprite_html"><div class="ttname"><a href="classSprite.html">Sprite</a></div><div class="ttdef"><b>Definition:</b> sprite.h:8</div></div>
+<div class="ttc" id="aclassSprite_html_a32ce2f340cf12e70f939704d04a55362"><div class="ttname"><a href="classSprite.html#a32ce2f340cf12e70f939704d04a55362">Sprite::Sprite</a></div><div class="ttdeci">Sprite(const std::string &amp;imagepath)</div><div class="ttdef"><b>Definition:</b> sprite.cpp:12</div></div>
+<div class="ttc" id="aclassSprite_html_a8accab430f9d90ae5117b57d67e32b84"><div class="ttname"><a href="classSprite.html#a8accab430f9d90ae5117b57d67e32b84">Sprite::~Sprite</a></div><div class="ttdeci">virtual ~Sprite()</div><div class="ttdef"><b>Definition:</b> sprite.cpp:53</div></div>
+<div class="ttc" id="aclassSprite_html_a542bde2c43fee753e529ee95dcf565a3"><div class="ttname"><a href="classSprite.html#a542bde2c43fee753e529ee95dcf565a3">Sprite::uvbuffer</a></div><div class="ttdeci">GLuint uvbuffer()</div><div class="ttdef"><b>Definition:</b> sprite.h:32</div></div>
+<div class="ttc" id="aclassSprite_html_a52c00b18eacd2808f5457149ed76b192"><div class="ttname"><a href="classSprite.html#a52c00b18eacd2808f5457149ed76b192">Sprite::width</a></div><div class="ttdeci">unsigned int width()</div><div class="ttdef"><b>Definition:</b> sprite.h:37</div></div>
+<div class="ttc" id="aclassSprite_html_a68cf0df5978deb9e49c6b32f53e632b6"><div class="ttname"><a href="classSprite.html#a68cf0df5978deb9e49c6b32f53e632b6">Sprite::texture</a></div><div class="ttdeci">GLuint texture()</div><div class="ttdef"><b>Definition:</b> sprite.h:23</div></div>
+<div class="ttc" id="aclassSprite_html_ab4cf3eeada477720262603cb6d07634c"><div class="ttname"><a href="classSprite.html#ab4cf3eeada477720262603cb6d07634c">Sprite::height</a></div><div class="ttdeci">unsigned int height()</div><div class="ttdef"><b>Definition:</b> sprite.h:42</div></div>
+<div class="ttc" id="aclassSprite_html_af1cfac240657d173ffcc469ffa718515"><div class="ttname"><a href="classSprite.html#af1cfac240657d173ffcc469ffa718515">Sprite::vertexbuffer</a></div><div class="ttdeci">GLuint vertexbuffer()</div><div class="ttdef"><b>Definition:</b> sprite.h:27</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 11 2020 10:26:07 for Custom Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 19 2020 12:30:27 for Custom Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.16
 </small></address>

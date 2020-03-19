@@ -1,4 +1,9 @@
 var searchData=
 [
-  ['vectorx_5ft_158',['VectorX_t',['../classVectorX__t.html#a0afaded32c122f68359ed9aa789978f2',1,'VectorX_t::VectorX_t()'],['../classVectorX__t.html#a3e9c4344b74f4a74924188c9d7ee6b16',1,'VectorX_t::VectorX_t(T xx, T yy)'],['../classVectorX__t.html#a11ee21d75512d8ecf7cbb21b97e4b47e',1,'VectorX_t::VectorX_t(T xx, T yy, T zz)'],['../classVectorX__t.html#a25ef303a780ddfd52572d95c232d2a5b',1,'VectorX_t::VectorX_t(Point_t&lt; T &gt; p)'],['../classVectorX__t.html#a8ac4f12ebd7673a4b3b7cf86e842c912',1,'VectorX_t::VectorX_t(Point_t&lt; T &gt; begin, Point_t&lt; T &gt; end)']]]
+  ['removechild_173',['removeChild',['../classActor.html#a677b6956c8b8680463ad6ac7e4326429',1,'Actor']]],
+  ['rotate_174',['rotate',['../classVectorX__t.html#ad4e572fc98fe4d786b907598b2c8eb77',1,'VectorX_t']]],
+  ['rotatedeg_175',['rotateDeg',['../classVectorX__t.html#a06dd763262cfd0779011a0a292ba2143',1,'VectorX_t']]],
+  ['rotation_176',['rotation',['../classVectorX__t.html#a3ff22c065f96081f36844f175822117b',1,'VectorX_t']]],
+  ['rotationdeg_177',['rotationDeg',['../classVectorX__t.html#a9f02a5c0c808aa2270e443031ba1e9e0',1,'VectorX_t']]],
+  ['run_178',['run',['../classCore.html#aae9e07e9a6ff17ee4d2b5c46858515ab',1,'Core']]]
 ];

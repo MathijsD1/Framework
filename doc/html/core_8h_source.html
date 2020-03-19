@@ -73,36 +73,38 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CORE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;common/renderer.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classCore.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCore.html">Core</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classCore.html#a14e63188e0aa7c4a6f72d5501384d1f9">Core</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classCore.html#a776f8c46504b14183883c6273f93eaed">~Core</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCore.html#adcc93b561dfefacfe2bcbd60604ea7a6">run</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classCore.html#a844e2da329d6a9638f7995bf150f6929">   27</a></span>&#160;    <a class="code" href="classRenderer.html">Renderer</a>* <a class="code" href="classCore.html#a844e2da329d6a9638f7995bf150f6929">getRenderer</a>() { <span class="keywordflow">return</span> <a class="code" href="classCore.html#a8066b881573043960da5e5bc94011740">_renderer</a>; }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classCore.html#a363feff139d9fe4e22bdc71a4fd0ed00">   32</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classCore.html#a363feff139d9fe4e22bdc71a4fd0ed00">isRunning</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classCore.html#a8066b881573043960da5e5bc94011740">   37</a></span>&#160;    <a class="code" href="classRenderer.html">Renderer</a>* <a class="code" href="classCore.html#a8066b881573043960da5e5bc94011740">_renderer</a> = 0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;common/scene.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classCore.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCore.html">Core</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classCore.html#a14e63188e0aa7c4a6f72d5501384d1f9">Core</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classCore.html#a776f8c46504b14183883c6273f93eaed">~Core</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCore.html#aae9e07e9a6ff17ee4d2b5c46858515ab">run</a>(<a class="code" href="classScene.html">Scene</a>* scene);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classCore.html#a844e2da329d6a9638f7995bf150f6929">   28</a></span>&#160;    <a class="code" href="classRenderer.html">Renderer</a>* <a class="code" href="classCore.html#a844e2da329d6a9638f7995bf150f6929">getRenderer</a>() { <span class="keywordflow">return</span> <a class="code" href="classCore.html#a8066b881573043960da5e5bc94011740">_renderer</a>; }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classCore.html#a363feff139d9fe4e22bdc71a4fd0ed00">   33</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classCore.html#a363feff139d9fe4e22bdc71a4fd0ed00">isRunning</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classCore.html#a8066b881573043960da5e5bc94011740">   38</a></span>&#160;    <a class="code" href="classRenderer.html">Renderer</a>* <a class="code" href="classCore.html#a8066b881573043960da5e5bc94011740">_renderer</a> = 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassCore_html_a8066b881573043960da5e5bc94011740"><div class="ttname"><a href="classCore.html#a8066b881573043960da5e5bc94011740">Core::_renderer</a></div><div class="ttdeci">Renderer * _renderer</div><div class="ttdef"><b>Definition:</b> core.h:37</div></div>
-<div class="ttc" id="aclassCore_html_a776f8c46504b14183883c6273f93eaed"><div class="ttname"><a href="classCore.html#a776f8c46504b14183883c6273f93eaed">Core::~Core</a></div><div class="ttdeci">~Core()</div><div class="ttdef"><b>Definition:</b> core.cpp:21</div></div>
-<div class="ttc" id="aclassCore_html_adcc93b561dfefacfe2bcbd60604ea7a6"><div class="ttname"><a href="classCore.html#adcc93b561dfefacfe2bcbd60604ea7a6">Core::run</a></div><div class="ttdeci">void run()</div><div class="ttdef"><b>Definition:</b> core.cpp:27</div></div>
-<div class="ttc" id="aclassCore_html_a14e63188e0aa7c4a6f72d5501384d1f9"><div class="ttname"><a href="classCore.html#a14e63188e0aa7c4a6f72d5501384d1f9">Core::Core</a></div><div class="ttdeci">Core()</div><div class="ttdef"><b>Definition:</b> core.cpp:12</div></div>
-<div class="ttc" id="aclassRenderer_html"><div class="ttname"><a href="classRenderer.html">Renderer</a></div><div class="ttdef"><b>Definition:</b> renderer.h:14</div></div>
-<div class="ttc" id="aclassCore_html_a363feff139d9fe4e22bdc71a4fd0ed00"><div class="ttname"><a href="classCore.html#a363feff139d9fe4e22bdc71a4fd0ed00">Core::isRunning</a></div><div class="ttdeci">bool isRunning</div><div class="ttdef"><b>Definition:</b> core.h:32</div></div>
-<div class="ttc" id="aclassCore_html_a844e2da329d6a9638f7995bf150f6929"><div class="ttname"><a href="classCore.html#a844e2da329d6a9638f7995bf150f6929">Core::getRenderer</a></div><div class="ttdeci">Renderer * getRenderer()</div><div class="ttdef"><b>Definition:</b> core.h:27</div></div>
-<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> core.h:6</div></div>
+<div class="ttc" id="aclassCore_html_a8066b881573043960da5e5bc94011740"><div class="ttname"><a href="classCore.html#a8066b881573043960da5e5bc94011740">Core::_renderer</a></div><div class="ttdeci">Renderer * _renderer</div><div class="ttdef"><b>Definition:</b> core.h:38</div></div>
+<div class="ttc" id="aclassScene_html"><div class="ttname"><a href="classScene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> scene.h:6</div></div>
+<div class="ttc" id="aclassCore_html_a776f8c46504b14183883c6273f93eaed"><div class="ttname"><a href="classCore.html#a776f8c46504b14183883c6273f93eaed">Core::~Core</a></div><div class="ttdeci">~Core()</div><div class="ttdef"><b>Definition:</b> core.cpp:23</div></div>
+<div class="ttc" id="aclassCore_html_a14e63188e0aa7c4a6f72d5501384d1f9"><div class="ttname"><a href="classCore.html#a14e63188e0aa7c4a6f72d5501384d1f9">Core::Core</a></div><div class="ttdeci">Core()</div><div class="ttdef"><b>Definition:</b> core.cpp:14</div></div>
+<div class="ttc" id="aclassRenderer_html"><div class="ttname"><a href="classRenderer.html">Renderer</a></div><div class="ttdef"><b>Definition:</b> renderer.h:16</div></div>
+<div class="ttc" id="aclassCore_html_a363feff139d9fe4e22bdc71a4fd0ed00"><div class="ttname"><a href="classCore.html#a363feff139d9fe4e22bdc71a4fd0ed00">Core::isRunning</a></div><div class="ttdeci">bool isRunning</div><div class="ttdef"><b>Definition:</b> core.h:33</div></div>
+<div class="ttc" id="aclassCore_html_a844e2da329d6a9638f7995bf150f6929"><div class="ttname"><a href="classCore.html#a844e2da329d6a9638f7995bf150f6929">Core::getRenderer</a></div><div class="ttdeci">Renderer * getRenderer()</div><div class="ttdef"><b>Definition:</b> core.h:28</div></div>
+<div class="ttc" id="aclassCore_html_aae9e07e9a6ff17ee4d2b5c46858515ab"><div class="ttname"><a href="classCore.html#aae9e07e9a6ff17ee4d2b5c46858515ab">Core::run</a></div><div class="ttdeci">void run(Scene *scene)</div><div class="ttdef"><b>Definition:</b> core.cpp:32</div></div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> core.h:7</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 11 2020 10:26:07 for Custom Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 19 2020 12:30:27 for Custom Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.16
 </small></address>

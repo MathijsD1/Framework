@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['fromcartesian_116',['fromCartesian',['../classPolar__t.html#a7a7ea302869a50342c010083943a2dbc',1,'Polar_t::fromCartesian(const VectorX_t&lt; T &gt; &amp;vec)'],['../classPolar__t.html#a18fa5c39eddf7f3554ddcec7ea95eb27',1,'Polar_t::fromCartesian(T x, T y)']]]
+  ['deltatime_136',['deltaTime',['../classTime.html#a4e9a9cb916ff33437d517533aa905512',1,'Time']]],
+  ['dot_137',['dot',['../classVectorX__t.html#a47edb26aa302ab3611ec850f56b1a0f0',1,'VectorX_t']]]
 ];

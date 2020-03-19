@@ -74,18 +74,23 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;common/actor.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classScene.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classScene.html">Scene</a> : <a class="code" href="classActor.html">Actor</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classScene.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classScene.html">Scene</a> : <span class="keyword">public</span> <a class="code" href="classActor.html">Actor</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;};</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classScene.html#a29ad9fb8d3ecf72ed266dc3cd891cf3a">updateScene</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classScene.html#a652d098e90850d5ae8d74a441dfbc94f">_updateActor</a>(<a class="code" href="classActor.html">Actor</a>* actor);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassScene_html"><div class="ttname"><a href="classScene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> scene.h:6</div></div>
-<div class="ttc" id="aclassActor_html"><div class="ttname"><a href="classActor.html">Actor</a></div><div class="ttdef"><b>Definition:</b> actor.h:8</div></div>
+<div class="ttc" id="aclassScene_html_a29ad9fb8d3ecf72ed266dc3cd891cf3a"><div class="ttname"><a href="classScene.html#a29ad9fb8d3ecf72ed266dc3cd891cf3a">Scene::updateScene</a></div><div class="ttdeci">void updateScene()</div><div class="ttdef"><b>Definition:</b> scene.cpp:3</div></div>
+<div class="ttc" id="aclassActor_html"><div class="ttname"><a href="classActor.html">Actor</a></div><div class="ttdef"><b>Definition:</b> actor.h:12</div></div>
+<div class="ttc" id="aclassScene_html_a652d098e90850d5ae8d74a441dfbc94f"><div class="ttname"><a href="classScene.html#a652d098e90850d5ae8d74a441dfbc94f">Scene::_updateActor</a></div><div class="ttdeci">void _updateActor(Actor *actor)</div><div class="ttdef"><b>Definition:</b> scene.cpp:8</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 11 2020 10:26:07 for Custom Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 19 2020 12:30:27 for Custom Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.16
 </small></address>

@@ -75,28 +75,34 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classTime.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTime.html">Time</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">static</span> <a class="code" href="classTime.html">Time</a>* <a class="code" href="classTime.html#a44bef0a0a824f7ce7cae88a9c9a382e8">getInstance</a>();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classTime.html#a4245e409c7347d1d671858962c2ca3b5">Time</a>();</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classTime.html#a6ce3979f467a68255a1b8d87e57e5a73">updateDeltaTime</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classTime.html#a1e92dbe963fa3cdd6bea207680f5f6d1">~Time</a>();</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classTime.html#a405c7642c4ba0ee719a8d0491099102a">   20</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classTime.html#a405c7642c4ba0ee719a8d0491099102a">getDeltaTime</a>() { <span class="keywordflow">return</span> <a class="code" href="classTime.html#a3788afb7fbed36073f26b17a20968a55">_deltaTime</a>; }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classTime.html#a271b9376cd463c3d153e6a1729080c29">   25</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classTime.html">Time</a>* <a class="code" href="classTime.html#a271b9376cd463c3d153e6a1729080c29">_instance</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">static</span> <a class="code" href="classTime.html">Time</a>* <a class="code" href="classTime.html#a44bef0a0a824f7ce7cae88a9c9a382e8">getInstance</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classTime.html#a6ce3979f467a68255a1b8d87e57e5a73">updateDeltaTime</a>();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classTime.html#a3788afb7fbed36073f26b17a20968a55">   30</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classTime.html#a3788afb7fbed36073f26b17a20968a55">_deltaTime</a> = 0;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classTime.html#a4e9a9cb916ff33437d517533aa905512">   30</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="classTime.html#a4e9a9cb916ff33437d517533aa905512">deltaTime</a>() { <span class="keywordflow">return</span> <a class="code" href="classTime.html#a44bef0a0a824f7ce7cae88a9c9a382e8">getInstance</a>()-&gt;<a class="code" href="classTime.html#a3788afb7fbed36073f26b17a20968a55">_deltaTime</a>; }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classTime.html#a271b9376cd463c3d153e6a1729080c29">   35</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classTime.html">Time</a>* <a class="code" href="classTime.html#a271b9376cd463c3d153e6a1729080c29">_instance</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classTime.html#a3788afb7fbed36073f26b17a20968a55">   40</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classTime.html#a3788afb7fbed36073f26b17a20968a55">_deltaTime</a> = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassTime_html_a271b9376cd463c3d153e6a1729080c29"><div class="ttname"><a href="classTime.html#a271b9376cd463c3d153e6a1729080c29">Time::_instance</a></div><div class="ttdeci">static Time * _instance</div><div class="ttdef"><b>Definition:</b> time.h:25</div></div>
-<div class="ttc" id="aclassTime_html_a44bef0a0a824f7ce7cae88a9c9a382e8"><div class="ttname"><a href="classTime.html#a44bef0a0a824f7ce7cae88a9c9a382e8">Time::getInstance</a></div><div class="ttdeci">static Time * getInstance()</div><div class="ttdef"><b>Definition:</b> time.cpp:8</div></div>
-<div class="ttc" id="aclassTime_html_a6ce3979f467a68255a1b8d87e57e5a73"><div class="ttname"><a href="classTime.html#a6ce3979f467a68255a1b8d87e57e5a73">Time::updateDeltaTime</a></div><div class="ttdeci">float updateDeltaTime()</div><div class="ttdef"><b>Definition:</b> time.cpp:18</div></div>
+<div class="ttc" id="aclassTime_html_a271b9376cd463c3d153e6a1729080c29"><div class="ttname"><a href="classTime.html#a271b9376cd463c3d153e6a1729080c29">Time::_instance</a></div><div class="ttdeci">static Time * _instance</div><div class="ttdef"><b>Definition:</b> time.h:35</div></div>
+<div class="ttc" id="aclassTime_html_a44bef0a0a824f7ce7cae88a9c9a382e8"><div class="ttname"><a href="classTime.html#a44bef0a0a824f7ce7cae88a9c9a382e8">Time::getInstance</a></div><div class="ttdeci">static Time * getInstance()</div><div class="ttdef"><b>Definition:</b> time.cpp:19</div></div>
+<div class="ttc" id="aclassTime_html_a1e92dbe963fa3cdd6bea207680f5f6d1"><div class="ttname"><a href="classTime.html#a1e92dbe963fa3cdd6bea207680f5f6d1">Time::~Time</a></div><div class="ttdeci">~Time()</div><div class="ttdef"><b>Definition:</b> time.cpp:14</div></div>
+<div class="ttc" id="aclassTime_html_a6ce3979f467a68255a1b8d87e57e5a73"><div class="ttname"><a href="classTime.html#a6ce3979f467a68255a1b8d87e57e5a73">Time::updateDeltaTime</a></div><div class="ttdeci">float updateDeltaTime()</div><div class="ttdef"><b>Definition:</b> time.cpp:29</div></div>
 <div class="ttc" id="aclassTime_html"><div class="ttname"><a href="classTime.html">Time</a></div><div class="ttdef"><b>Definition:</b> time.h:4</div></div>
-<div class="ttc" id="aclassTime_html_a3788afb7fbed36073f26b17a20968a55"><div class="ttname"><a href="classTime.html#a3788afb7fbed36073f26b17a20968a55">Time::_deltaTime</a></div><div class="ttdeci">float _deltaTime</div><div class="ttdef"><b>Definition:</b> time.h:30</div></div>
-<div class="ttc" id="aclassTime_html_a405c7642c4ba0ee719a8d0491099102a"><div class="ttname"><a href="classTime.html#a405c7642c4ba0ee719a8d0491099102a">Time::getDeltaTime</a></div><div class="ttdeci">float getDeltaTime()</div><div class="ttdef"><b>Definition:</b> time.h:20</div></div>
+<div class="ttc" id="aclassTime_html_a3788afb7fbed36073f26b17a20968a55"><div class="ttname"><a href="classTime.html#a3788afb7fbed36073f26b17a20968a55">Time::_deltaTime</a></div><div class="ttdeci">float _deltaTime</div><div class="ttdef"><b>Definition:</b> time.h:40</div></div>
+<div class="ttc" id="aclassTime_html_a4245e409c7347d1d671858962c2ca3b5"><div class="ttname"><a href="classTime.html#a4245e409c7347d1d671858962c2ca3b5">Time::Time</a></div><div class="ttdeci">Time()</div><div class="ttdef"><b>Definition:</b> time.cpp:9</div></div>
+<div class="ttc" id="aclassTime_html_a4e9a9cb916ff33437d517533aa905512"><div class="ttname"><a href="classTime.html#a4e9a9cb916ff33437d517533aa905512">Time::deltaTime</a></div><div class="ttdeci">static float deltaTime()</div><div class="ttdef"><b>Definition:</b> time.h:30</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 11 2020 10:26:07 for Custom Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 19 2020 12:30:27 for Custom Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.16
 </small></address>

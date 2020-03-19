@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['_7ecore_159',['~Core',['../classCore.html#a776f8c46504b14183883c6273f93eaed',1,'Core']]],
-  ['_7epoint_5ft_160',['~Point_t',['../classPoint__t.html#ae05b28ed42a34a491fd8a2a94500b51f',1,'Point_t']]],
-  ['_7evectorx_5ft_161',['~VectorX_t',['../classVectorX__t.html#a91e541bc8a28a206c0caaefee09c4fdc',1,'VectorX_t']]]
+  ['setfilter_179',['setFilter',['../classSprite.html#acf38f5574ee33995fb4537b3dc9c8b41',1,'Sprite']]],
+  ['setlength_180',['setLength',['../classVectorX__t.html#a76a80057df49cb2af71f0ea70c349655',1,'VectorX_t']]],
+  ['sprite_181',['Sprite',['../classSprite.html#a32ce2f340cf12e70f939704d04a55362',1,'Sprite']]]
 ];

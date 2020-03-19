@@ -65,9 +65,10 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classActor-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Actor Class Reference</div>  </div>
+<div class="title">Actor Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -82,12 +83,22 @@ Inheritance diagram for Actor:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af638cc749238f87426fe650be0fd85fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#af638cc749238f87426fe650be0fd85fa">addSprite</a> (<a class="el" href="classSprite.html">Sprite</a> *sprite)</td></tr>
-<tr class="separator:af638cc749238f87426fe650be0fd85fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0990a84a4733b441430f6d7326cab558"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classActor.html">Actor</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#a0990a84a4733b441430f6d7326cab558">getChildren</a> ()</td></tr>
-<tr class="separator:a0990a84a4733b441430f6d7326cab558"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af10d6f5b2ce4f5ab7a43c813b8b5bf95"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#af10d6f5b2ce4f5ab7a43c813b8b5bf95">update</a> ()</td></tr>
-<tr class="separator:af10d6f5b2ce4f5ab7a43c813b8b5bf95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a0ff4335a1ee9096df90f288c026c8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#a2a0ff4335a1ee9096df90f288c026c8b">Actor</a> ()</td></tr>
+<tr class="separator:a2a0ff4335a1ee9096df90f288c026c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb4acb18015b312cbfc49470ac32d052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#adb4acb18015b312cbfc49470ac32d052">addSprite</a> (std::string path, int filterMode=1)</td></tr>
+<tr class="separator:adb4acb18015b312cbfc49470ac32d052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee3cde1505093d6ef7fba6dbf33d7498"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSprite.html">Sprite</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#aee3cde1505093d6ef7fba6dbf33d7498">getSprite</a> ()</td></tr>
+<tr class="separator:aee3cde1505093d6ef7fba6dbf33d7498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2744753f0f502d5e399c719faab497fe"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classActor.html">Actor</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#a2744753f0f502d5e399c719faab497fe">children</a> ()</td></tr>
+<tr class="separator:a2744753f0f502d5e399c719faab497fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4363e3b26c7903de41423a2fb1fc5f6e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#a4363e3b26c7903de41423a2fb1fc5f6e">update</a> ()=0</td></tr>
+<tr class="separator:a4363e3b26c7903de41423a2fb1fc5f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a819a823a71070baf04afd27ef8d65462"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#a819a823a71070baf04afd27ef8d65462">addChild</a> (<a class="el" href="classActor.html">Actor</a> *child)</td></tr>
+<tr class="separator:a819a823a71070baf04afd27ef8d65462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a677b6956c8b8680463ad6ac7e4326429"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#a677b6956c8b8680463ad6ac7e4326429">removeChild</a> (<a class="el" href="classActor.html">Actor</a> *child)</td></tr>
+<tr class="separator:a677b6956c8b8680463ad6ac7e4326429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6da7fe13f5cee31d8d68ef04fb173fed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#a6da7fe13f5cee31d8d68ef04fb173fed">id</a> ()</td></tr>
+<tr class="separator:a6da7fe13f5cee31d8d68ef04fb173fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -100,14 +111,61 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a44e83fd05944295b3c17b6dbe39f2aab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSprite.html">Sprite</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#a44e83fd05944295b3c17b6dbe39f2aab">_sprite</a></td></tr>
+<tr class="memitem:a44e83fd05944295b3c17b6dbe39f2aab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSprite.html">Sprite</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#a44e83fd05944295b3c17b6dbe39f2aab">_sprite</a> = 0</td></tr>
 <tr class="separator:a44e83fd05944295b3c17b6dbe39f2aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2e4f883ebafac06ff2fd553c26b59e0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classActor.html">Actor</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#ab2e4f883ebafac06ff2fd553c26b59e0">_children</a></td></tr>
 <tr class="separator:ab2e4f883ebafac06ff2fd553c26b59e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa92d48e47fa388efe99f05ccb1c96542"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classActor.html">Actor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#aa92d48e47fa388efe99f05ccb1c96542">_parent</a></td></tr>
+<tr class="separator:aa92d48e47fa388efe99f05ccb1c96542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65cdf87309384d6daff23ace752c4551"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#a65cdf87309384d6daff23ace752c4551">_id</a></td></tr>
+<tr class="separator:a65cdf87309384d6daff23ace752c4551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ac382424edfcc5350beada2c4f7c23c6b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActor.html#ac382424edfcc5350beada2c4f7c23c6b">_nextID</a> = 0</td></tr>
+<tr class="separator:ac382424edfcc5350beada2c4f7c23c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2a0ff4335a1ee9096df90f288c026c8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a0ff4335a1ee9096df90f288c026c8b">&#9670;&nbsp;</a></span>Actor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Actor::Actor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="classActor.html">Actor</a> constructor. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af638cc749238f87426fe650be0fd85fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af638cc749238f87426fe650be0fd85fa">&#9670;&nbsp;</a></span>addSprite()</h2>
+<a id="a819a823a71070baf04afd27ef8d65462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a819a823a71070baf04afd27ef8d65462">&#9670;&nbsp;</a></span>addChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Actor::addChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classActor.html">Actor</a> *&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds a <a class="el" href="classActor.html">Actor</a> as a child. </p>
+
+</div>
+</div>
+<a id="adb4acb18015b312cbfc49470ac32d052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb4acb18015b312cbfc49470ac32d052">&#9670;&nbsp;</a></span>addSprite()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -115,18 +173,28 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Actor::addSprite </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classSprite.html">Sprite</a> *&#160;</td>
-          <td class="paramname"><em>sprite</em></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>filterMode</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Adds a sprite to the <a class="el" href="classActor.html">Actor</a>. </p>
+<p>Adds a sprite to the <a class="el" href="classActor.html">Actor</a> and sets the filter mode. </p>
 
 </div>
 </div>
-<a id="a0990a84a4733b441430f6d7326cab558"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0990a84a4733b441430f6d7326cab558">&#9670;&nbsp;</a></span>getChildren()</h2>
+<a id="a2744753f0f502d5e399c719faab497fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2744753f0f502d5e399c719faab497fe">&#9670;&nbsp;</a></span>children()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +203,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classActor.html">Actor</a>*&gt;&amp; Actor::getChildren </td>
+          <td class="memname">const std::vector&lt;<a class="el" href="classActor.html">Actor</a>*&gt;&amp; Actor::children </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -151,8 +219,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af10d6f5b2ce4f5ab7a43c813b8b5bf95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af10d6f5b2ce4f5ab7a43c813b8b5bf95">&#9670;&nbsp;</a></span>update()</h2>
+<a id="aee3cde1505093d6ef7fba6dbf33d7498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee3cde1505093d6ef7fba6dbf33d7498">&#9670;&nbsp;</a></span>getSprite()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,7 +229,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Actor::update </td>
+          <td class="memname"><a class="el" href="classSprite.html">Sprite</a>* Actor::getSprite </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -169,11 +237,82 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Update method which is called every frame (In the future). </p>
+<p>Getter of the sprite of the <a class="el" href="classActor.html">Actor</a>. </p>
+
+</div>
+</div>
+<a id="a6da7fe13f5cee31d8d68ef04fb173fed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6da7fe13f5cee31d8d68ef04fb173fed">&#9670;&nbsp;</a></span>id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Actor::id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Getter of the <a class="el" href="classActor.html">Actor</a> ID. </p>
+
+</div>
+</div>
+<a id="a677b6956c8b8680463ad6ac7e4326429"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a677b6956c8b8680463ad6ac7e4326429">&#9670;&nbsp;</a></span>removeChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Actor::removeChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classActor.html">Actor</a> *&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Removes a <a class="el" href="classActor.html">Actor</a> as a child. </p>
+
+</div>
+</div>
+<a id="a4363e3b26c7903de41423a2fb1fc5f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4363e3b26c7903de41423a2fb1fc5f6e">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Actor::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Update method which is called every frame. </p>
 
 </div>
 </div>
@@ -201,6 +340,75 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a65cdf87309384d6daff23ace752c4551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65cdf87309384d6daff23ace752c4551">&#9670;&nbsp;</a></span>_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Actor::_id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The ID of this <a class="el" href="classActor.html">Actor</a>. </p>
+
+</div>
+</div>
+<a id="ac382424edfcc5350beada2c4f7c23c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac382424edfcc5350beada2c4f7c23c6b">&#9670;&nbsp;</a></span>_nextID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Actor::_nextID = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The ID the next <a class="el" href="classActor.html">Actor</a> should have. </p>
+
+</div>
+</div>
+<a id="aa92d48e47fa388efe99f05ccb1c96542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa92d48e47fa388efe99f05ccb1c96542">&#9670;&nbsp;</a></span>_parent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classActor.html">Actor</a>* Actor::_parent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Parent of this <a class="el" href="classActor.html">Actor</a>. </p>
+
+</div>
+</div>
 <a id="a44e83fd05944295b3c17b6dbe39f2aab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44e83fd05944295b3c17b6dbe39f2aab">&#9670;&nbsp;</a></span>_sprite</h2>
 
@@ -211,7 +419,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSprite.html">Sprite</a>* Actor::_sprite</td>
+          <td class="memname"><a class="el" href="classSprite.html">Sprite</a>* Actor::_sprite = 0</td>
         </tr>
       </table>
   </td>
@@ -276,7 +484,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 11 2020 10:26:07 for Custom Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 19 2020 12:30:27 for Custom Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.16
 </small></address>

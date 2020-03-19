@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cartesian_112',['cartesian',['../classPolar__t.html#aa4f91bf6479b2d2cefb22d79de8e1d42',1,'Polar_t']]],
-  ['core_113',['Core',['../classCore.html#a14e63188e0aa7c4a6f72d5501384d1f9',1,'Core']]],
-  ['cross_114',['cross',['../classVectorX__t.html#a8384a54196c5416ccca9312a87f23321',1,'VectorX_t']]]
+  ['actor_129',['Actor',['../classActor.html#a2a0ff4335a1ee9096df90f288c026c8b',1,'Actor']]],
+  ['addchild_130',['addChild',['../classActor.html#a819a823a71070baf04afd27ef8d65462',1,'Actor']]],
+  ['addsprite_131',['addSprite',['../classActor.html#adb4acb18015b312cbfc49470ac32d052',1,'Actor']]]
 ];
