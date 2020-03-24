@@ -1,4 +1,5 @@
 #include <game/ghost.h>
+#include <common/debug.h>
 
 Ghost::Ghost() 
 {
@@ -11,4 +12,6 @@ Ghost::Ghost()
 
 void Ghost::update() {
 	this->scale += Vector2(0.1f, 0.1f) * Time::deltaTime();
+	
+	Debug::printMessage("Ghost Update");
 }

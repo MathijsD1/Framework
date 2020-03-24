@@ -10,5 +10,5 @@ GameScene::GameScene()
 
 void GameScene::update() 
 {
-	std::cout << "Gamescene Update" << std::endl;
+	
 }
