@@ -80,6 +80,8 @@ add_library(common # ar rcs libcommon.a
 	common/pointx.h
 	common/vectorx.h
 	common/config.h
+	common/debug.h
+	common/debug.cpp
 )
 
 # Demo
