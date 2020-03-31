@@ -82,6 +82,8 @@ add_library(common # ar rcs libcommon.a
 	common/config.h
 	common/debug.h
 	common/debug.cpp
+	common/random.h
+	common/random.cpp
 )
 
 # Demo

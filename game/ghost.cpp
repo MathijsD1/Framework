@@ -1,5 +1,4 @@
 #include <game/ghost.h>
-#include <common/debug.h>
 
 Ghost::Ghost() 
 {
@@ -13,6 +12,7 @@ Ghost::Ghost()
 void Ghost::update() {
 
 	Debug::printMessage("Ghost Update");
+
 	moveTowards(Vector2(255, 125));
 }
 

@@ -3,6 +3,9 @@
 
 #include <common/actor.h>
 #include <common/vectorx.h>
+#include <common/debug.h>
+#include <common/random.h>
+
 
 class Ghost : public Actor
 {
