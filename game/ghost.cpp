@@ -4,7 +4,7 @@ Ghost::Ghost()
 {
 	this->addSprite("assets/kingkong.tga", 1);
 
-	this->position = Vector2(SCREENWIDTH / 2, SCREENHEIGHT / 2);
+	this->position = Vector2(Random::getRandomBetween(0, SCREENWIDTH), Random::getRandomBetween(0, SCREENHEIGHT));
 	this->scale = Vector2(1, 1);
 	this->rotation = 0;
 }
@@ -18,8 +18,11 @@ void Ghost::update() {
 
 void Ghost::moveTowards(Vector2 target) 
 {
-	Vector2 direction = target - this->position;
-	direction.normalize();
+	if (this->position != target) 
+	{
+		Vector2 direction = target - this->position;
+		direction.normalize();
 
-	this->position += direction * 100 * Time::deltaTime();
+		this->position += direction * 25 * Time::deltaTime();
+	}
 }
