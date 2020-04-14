@@ -13,6 +13,8 @@ public:
 	Ghost();
 	virtual void update();
 	void moveTowards(Vector2 target);
+private:
+	float _speed = 10;
 };
 
 #endif

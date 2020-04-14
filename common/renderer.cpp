@@ -52,8 +52,8 @@ int Renderer::init()
 	// Ensure we can capture the escape key being pressed below
 	glfwSetInputMode(_window, GLFW_STICKY_KEYS, GL_TRUE);
 
-	// Dark blue background
-	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
+	// Dark Gray background
+	glClearColor(0.05f, 0.05f, 0.05f, 0.0f);
 
 	// Enable depth test
 	//glEnable(GL_DEPTH_TEST);
@@ -71,8 +71,74 @@ int Renderer::init()
 	// Use our shader
 	glUseProgram(_programID);
 
+
 	return 0;
 }
+
+GLuint Renderer::renderToScreen()
+{
+	// Creating render target
+	GLuint framebufferName = 0;
+	glGenFramebuffers(1, &framebufferName);
+	glBindFramebuffer(GL_FRAMEBUFFER, framebufferName);
+
+	GLuint renderedTexture;
+	glGenTextures(1, &renderedTexture);
+
+	glBindTexture(GL_TEXTURE_2D, renderedTexture);
+
+	// Give a empty texture
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 1024, 768, 0, GL_RGB, GL_UNSIGNED_BYTE, 0);
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+
+	// Depth buffer
+
+	GLuint depthRenderBuffer;
+	glGenRenderbuffers(1, &depthRenderBuffer);
+	glBindRenderbuffer(GL_RENDERBUFFER, depthRenderBuffer);
+	glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, 1024, 768);
+	glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthRenderBuffer);
+
+	// Configure
+	glFramebufferTexture(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, renderedTexture, 0);
+
+	GLenum drawBuffers[1] = { GL_COLOR_ATTACHMENT0 };
+	glDrawBuffers(1, drawBuffers);
+
+	if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
+		return false;
+
+	glBindFramebuffer(GL_FRAMEBUFFER, framebufferName);
+
+	GLuint quad_VertexArrayID;
+	glGenVertexArrays(1, &quad_VertexArrayID);
+	glBindVertexArray(quad_VertexArrayID);
+
+	static const GLfloat g_quad_vertex_buffer_data[] = {
+		-1.0f, -1.0f, 0.0f,
+		1.0f, -1.0f, 0.0f,
+		-1.0f,  1.0f, 0.0f,
+		-1.0f,  1.0f, 0.0f,
+		1.0f, -1.0f, 0.0f,
+		1.0f,  1.0f, 0.0f,
+	};
+
+	GLuint quad_vertexbuffer;
+	glGenBuffers(1, &quad_vertexbuffer);
+	glBindBuffer(GL_ARRAY_BUFFER, quad_vertexbuffer);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(g_quad_vertex_buffer_data), g_quad_vertex_buffer_data, GL_STATIC_DRAW);
+
+	// Create and compile our GLSL program from the shaders
+	GLuint quad_programID = _programID;
+	GLuint texID = glGetUniformLocation(quad_programID, "renderedTexture");
+	GLuint timeID = glGetUniformLocation(quad_programID, "time");
+
+	glBindFramebuffer(GL_FRAMEBUFFER, 0);
+	glViewport(0, 0, SCREENWIDTH, SCREENHEIGHT);
+}
+
 
 
 void Renderer::renderSprite(Sprite* sprite, float px, float py, float sx, float sy, float rot)
@@ -135,6 +201,9 @@ void Renderer::renderSprite(Sprite* sprite, float px, float py, float sx, float 
 
 void Renderer::renderScene(Scene* scene) 
 {
+	// Clear Screen
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
 	// Render the Scene
 	_renderActor(scene);
 }

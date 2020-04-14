@@ -3,9 +3,12 @@
 
 GameScene::GameScene() 
 {
-	Ghost* g = new Ghost();
+	for (int i = 0; i < 10; i++)
+	{
+		Ghost* g = new Ghost();
 
-	this->addChild(g);
+		this->addChild(g);
+	}
 }
 
 void GameScene::update() 

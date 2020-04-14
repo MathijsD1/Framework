@@ -45,11 +45,9 @@ void Core::run(Scene* scene)
 	// Compute Matrices
 	computeMatricesFromInputs(_renderer->window(), deltaTime);
 
-	// Clear Screen
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
 	scene->updateScene();
 	_renderer->renderScene(scene);
+	_renderer->renderToScreen();
 
 	// Swap Buffers
 	glfwSwapBuffers(_renderer->window());

@@ -21,6 +21,7 @@ class Renderer
 
 		void renderSprite(Sprite* sprite, float px, float py, float sx, float sy, float rot);
 		void renderScene(Scene* scene);
+		GLuint renderToScreen();
 
 		GLFWwindow* window() { return _window; };
 

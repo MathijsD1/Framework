@@ -18,6 +18,11 @@ public:
 	Actor();
 
 	/**
+	*  Actor parent.
+	*/
+	const Actor* getParent() { return _parent; };
+
+	/**
 	*  Adds a sprite to the Actor and sets the filter mode. 
 	*/
 	void addSprite(std::string path, int filterMode = 1);
