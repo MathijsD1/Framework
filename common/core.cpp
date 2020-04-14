@@ -47,7 +47,6 @@ void Core::run(Scene* scene)
 
 	scene->updateScene();
 	_renderer->renderScene(scene);
-	_renderer->renderToScreen();
 
 	// Swap Buffers
 	glfwSwapBuffers(_renderer->window());

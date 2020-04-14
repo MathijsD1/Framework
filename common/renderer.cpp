@@ -18,7 +18,7 @@ Renderer::Renderer(unsigned int w, unsigned int h)
 Renderer::~Renderer()
 {
 	// Cleanup VBO and shader
-	glDeleteProgram(_programID);
+	glDeleteProgram(programID);
 }
 
 int Renderer::init()
@@ -64,18 +64,18 @@ int Renderer::init()
 	glEnable(GL_CULL_FACE);
 
 	// Create and compile our GLSL program from the shaders
-	_programID = this->loadShaders("shaders/sprite.vert", "shaders/sprite.frag");
+	programID = this->loadShaders("shaders/sprite.vert", "shaders/sprite.frag");
 
 	_projectionMatrix = glm::ortho(0.0f, (float)_window_width, (float)_window_height, 0.0f, 0.1f, 100.0f);
 
 	// Use our shader
-	glUseProgram(_programID);
+	glUseProgram(programID);
 
 
 	return 0;
 }
 
-GLuint Renderer::renderToScreen()
+GLuint Renderer::renderToScreen(GLuint _id)
 {
 	// Creating render target
 	GLuint framebufferName = 0;
@@ -123,11 +123,13 @@ GLuint Renderer::renderToScreen()
 	glBufferData(GL_ARRAY_BUFFER, sizeof(g_quad_vertex_buffer_data), g_quad_vertex_buffer_data, GL_STATIC_DRAW);
 
 	// Create and compile our GLSL program from the shaders
-	GLuint quad_programID = _programID;
+	GLuint quad_programID = _id;
 	GLuint texID = glGetUniformLocation(quad_programID, "renderedTexture");
 	GLuint timeID = glGetUniformLocation(quad_programID, "time");
 
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+	glUseProgram(_id);
 	glViewport(0, 0, SCREENWIDTH, SCREENHEIGHT);
 }
 
@@ -148,18 +150,18 @@ void Renderer::renderSprite(Sprite* sprite, float px, float py, float sx, float 
 
 	// Send our transformation to the currently bound shader,
 	// in the "MVP" uniform
-	GLuint matrixID = glGetUniformLocation(_programID, "MVP");
+	GLuint matrixID = glGetUniformLocation(programID, "MVP");
 	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &MVP[0][0]);
 
 	// Bind our texture in Texture Unit 0
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, sprite->texture());
 	// Set our "textureSampler" sampler to user Texture Unit 0
-	GLuint textureID  = glGetUniformLocation(_programID, "textureSampler");
+	GLuint textureID  = glGetUniformLocation(programID, "textureSampler");
 	glUniform1i(textureID, 0);
 
 	// 1st attribute buffer : vertices
-	GLuint vertexPositionID = glGetAttribLocation(_programID, "vertexPosition");
+	GLuint vertexPositionID = glGetAttribLocation(programID, "vertexPosition");
 	glEnableVertexAttribArray(vertexPositionID);
 	glBindBuffer(GL_ARRAY_BUFFER, sprite->vertexbuffer());
 	glVertexAttribPointer(
@@ -172,7 +174,7 @@ void Renderer::renderSprite(Sprite* sprite, float px, float py, float sx, float 
 	);
 
 	// 2nd attribute buffer : UVs
-	GLuint vertexUVID = glGetAttribLocation(_programID, "vertexUV");
+	GLuint vertexUVID = glGetAttribLocation(programID, "vertexUV");
 	glEnableVertexAttribArray(vertexUVID);
 	glBindBuffer(GL_ARRAY_BUFFER, sprite->uvbuffer());
 	glVertexAttribPointer(

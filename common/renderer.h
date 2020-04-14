@@ -21,12 +21,15 @@ class Renderer
 
 		void renderSprite(Sprite* sprite, float px, float py, float sx, float sy, float rot);
 		void renderScene(Scene* scene);
-		GLuint renderToScreen();
+		GLuint renderToScreen(GLuint _id);
 
 		GLFWwindow* window() { return _window; };
 
 		unsigned int width() { return _window_width; };
 		unsigned int height() { return _window_height; };
+
+		GLuint programID;
+		GLuint blurProgramID;
 
 	private:
 		int init();
@@ -41,8 +44,6 @@ class Renderer
 			const std::string& vertex_file_path,
 			const std::string& fragment_file_path
 		);
-
-		GLuint _programID;
 
 		glm::mat4 _projectionMatrix;
 };

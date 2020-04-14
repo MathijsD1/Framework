@@ -244,6 +244,13 @@ public:
 	 */
 	void rotationDeg(T angle);
 	/**
+	 * @brief Get the rounded Vector2.
+	 *
+	 * @param angle
+	 * the rounded Vector2
+	 */
+	const VectorX_t<T> getRounded() const;
+	/**
 	 * @brief Get a rotated copy of this Vector2 in radians.
 	 *
 	 * This only makes sense with a Vector2
@@ -584,6 +591,16 @@ template <class T>
 void VectorX_t<T>::rotationDeg(T angle)
 {
 	this->rotation(angle * DEG_TO_RAD);
+}
+
+template <class T>
+const VectorX_t<T> VectorX_t<T>::getRounded() const
+{
+	VectorX_t<T> copy = *this;
+	copy.x = roundf(copy.x);
+	copy.y = roundf(copy.y);
+
+	return copy;
 }
 
 template <class T>

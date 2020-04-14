@@ -2,21 +2,27 @@
 
 Ghost::Ghost() 
 {
-	this->addSprite("assets/rgba.tga", 1);
-	this->getSprite()->setFilter(1);
+	this->addSprite("assets/ghost.tga", 2);
 
 	this->position = Vector2(Random::getRandomBetween(0, SCREENWIDTH), Random::getRandomBetween(0, SCREENHEIGHT));
-	this->scale = Vector2(1, 1);
+	this->scale = Vector2(0.1f, 0.1f);
 	this->rotation = 0;
 
 	this->_speed = Random::getRandomBetween(12, 35);
 }
 
-void Ghost::update() {
-
+void Ghost::update() 
+{
 	Debug::printMessage("Ghost Update");
 
-	moveTowards(Vector2(SCREENWIDTH / 2, SCREENHEIGHT / 2));
+	Vector2 targetPos = Vector2(SCREENWIDTH / 2, SCREENHEIGHT / 2);
+
+	moveTowards(targetPos);
+
+	if (position.getRounded() == targetPos.getRounded()) 
+	{
+		this->position = Vector2(Random::getRandomBetween(0, SCREENWIDTH), Random::getRandomBetween(0, SCREENHEIGHT));
+	}
 }
 
 void Ghost::moveTowards(Vector2 target) 
