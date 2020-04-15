@@ -13,8 +13,6 @@ Ghost::Ghost()
 
 void Ghost::update() 
 {
-	Debug::printMessage("Ghost Update");
-
 	Vector2 targetPos = Vector2(SCREENWIDTH / 2, SCREENHEIGHT / 2);
 
 	moveTowards(targetPos);

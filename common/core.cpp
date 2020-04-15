@@ -31,6 +31,12 @@ Core::~Core()
 
 void Core::run(Scene* scene) 
 {
+	glfwPollEvents();
+	
+	glfwGetCursorPos(_renderer->window(), &mouseVerticalPosition, &mouseHorizontalPostion);
+
+	std::cout << mouseVerticalPosition << " " << mouseHorizontalPostion << std::endl;
+
 	if (glfwGetKey(_renderer->window(), GLFW_KEY_ESCAPE) == GLFW_PRESS && glfwWindowShouldClose(_renderer->window()) == 0)
 	{
 		isRunning = false;
