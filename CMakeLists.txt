@@ -112,6 +112,8 @@ add_executable(game # g++ game/game.cpp -o game
 	game/gamescene.cpp
 	game/ghost.h
 	game/ghost.cpp
+	game/player.h
+	game/player.cpp
 )
 target_link_libraries(game # g++ -lcommon
 	common
