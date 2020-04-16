@@ -4,15 +4,15 @@
 Player::Player() 
 {
 	this->position = Vector2(SCREENWIDTH / 2, SCREENHEIGHT / 2);
-	this->scale = Vector2(0.1f, 0.1f);
+	this->scale = Vector2(0.05f, 0.05f);
 	this->rotation = 0;
 
-	this->addSprite("assets/player.tga", 2);
+	this->addSprite("assets/Player.tga", 1);
 }
 
 void Player::update() {
 
-	//lookTowardsMousePosition();
+	lookTowardsMousePosition();
 }
 
 void Player::lookTowardsMousePosition() 

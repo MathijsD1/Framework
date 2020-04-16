@@ -3,10 +3,10 @@
 
 Ghost::Ghost() 
 {
-	this->addSprite("assets/ghost.tga", 2);
+	this->addSprite("assets/Ghost.tga", 2);
 
 	this->position = Vector2(Random::getRandomBetween(0, SCREENWIDTH), Random::getRandomBetween(0, SCREENHEIGHT));
-	this->scale = Vector2(0.1f, 0.1f);
+	this->scale = Vector2(0.08f, 0.08f);
 	this->rotation = 0;
 
 	this->_speed = Random::getRandomBetween(12, 35);
@@ -14,11 +14,13 @@ Ghost::Ghost()
 
 void Ghost::update() 
 {
-	std::cout << Input::getInstance()->getMouseLocation() << std::endl;
 
 	Vector2 targetPos = Vector2(SCREENWIDTH / 2, SCREENHEIGHT / 2);
 
 	moveTowards(targetPos);
+
+	Vector2 a = this->position - targetPos;
+	std::cout << a.getLength() << std::endl;
 
 	if (position.getRounded() == targetPos.getRounded()) 
 	{

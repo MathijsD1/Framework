@@ -4,17 +4,15 @@
 
 GameScene::GameScene() 
 {
-	
-	for (int i = 0; i < 10; i++)
+	Player* p = new Player();
+	this->addChild(p);
+
+	for (int i = 0; i < 1000; i++)
 	{
 		Ghost* g = new Ghost();
 
 		this->addChild(g);
-	}
-
-	Player* p = new Player();
-	this->addChild(p);
-	
+	}	
 }
 
 void GameScene::update() 

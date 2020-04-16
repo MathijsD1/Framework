@@ -53,7 +53,7 @@ int Renderer::init()
 	glfwSetInputMode(_window, GLFW_STICKY_KEYS, GL_TRUE);
 
 	// Dark Gray background
-	glClearColor(0.05f, 0.05f, 0.05f, 0.0f);
+	glClearColor(0.025f, 0.025f, 0.025f, 0.0f);
 
 	// Enable depth test
 	//glEnable(GL_DEPTH_TEST);
