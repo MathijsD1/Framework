@@ -1,4 +1,5 @@
 #include <common/actor.h>
+#include <common/resourcemanager.h>
 
 int Actor::_nextID = 0;
 
@@ -23,9 +24,19 @@ void Actor::addSprite(std::string path, int filterMode)
 		delete _sprite;
 	}
 
-	Sprite* sprite = new Sprite(path);
-	this->_sprite = sprite;
+	// If the sprite has been created before
+	if (ResourceManager::getInstance()->getCachedSprite(path) != nullptr) 
+	{
+		this->_sprite = ResourceManager::getInstance()->getCachedSprite(path);
+		return;
+	}
 
+	// If the sprite hasn't been created before
+	Sprite* sprite = new Sprite(path);
+
+	ResourceManager::getInstance()->addCachedSprite(path, sprite);
+
+	this->_sprite = sprite;
 	this->_sprite->setFilter(filterMode);
 }
 

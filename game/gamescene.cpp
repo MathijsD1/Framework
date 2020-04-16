@@ -7,7 +7,7 @@ GameScene::GameScene()
 	Player* p = new Player();
 	this->addChild(p);
 
-	for (int i = 0; i < 1000; i++)
+	for (int i = 0; i < 50; i++)
 	{
 		Ghost* g = new Ghost();
 

@@ -86,6 +86,8 @@ add_library(common # ar rcs libcommon.a
 	common/random.cpp
 	common/input.h
 	common/input.cpp
+	common/resourcemanager.h
+	common/resourcemanager.cpp
 )
 
 # Demo
