@@ -1,4 +1,5 @@
 #include <game/ghost.h>
+#include <common/input.h>
 
 Ghost::Ghost() 
 {
@@ -13,6 +14,8 @@ Ghost::Ghost()
 
 void Ghost::update() 
 {
+	std::cout << Input::getInstance()->getMouseLocation() << std::endl;
+
 	Vector2 targetPos = Vector2(SCREENWIDTH / 2, SCREENHEIGHT / 2);
 
 	moveTowards(targetPos);

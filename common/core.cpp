@@ -8,6 +8,7 @@
 #include <common/camera.h>
 #include <common/time.h>
 #include <common/config.h>
+#include <common/input.h>
 
 #include <iostream>
 
@@ -30,12 +31,8 @@ Core::~Core()
 }
 
 void Core::run(Scene* scene) 
-{
-	glfwPollEvents();
-	
-	glfwGetCursorPos(_renderer->window(), &mouseVerticalPosition, &mouseHorizontalPostion);
-
-	std::cout << mouseVerticalPosition << " " << mouseHorizontalPostion << std::endl;
+{	
+	glfwGetCursorPos(_renderer->window(), &Input::getInstance()->verticalMousePos, &Input::getInstance()->horizontalMousePos);
 
 	if (glfwGetKey(_renderer->window(), GLFW_KEY_ESCAPE) == GLFW_PRESS && glfwWindowShouldClose(_renderer->window()) == 0)
 	{

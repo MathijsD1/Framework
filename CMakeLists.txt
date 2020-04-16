@@ -84,6 +84,8 @@ add_library(common # ar rcs libcommon.a
 	common/debug.cpp
 	common/random.h
 	common/random.cpp
+	common/input.h
+	common/input.cpp
 )
 
 # Demo
