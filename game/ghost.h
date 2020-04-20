@@ -14,9 +14,14 @@ public:
 	virtual void update();
 	void isShown(bool visible);
 	void moveTowards(Vector2 target);
+	void respawn();
+	float getHealth() { return _health; }
+	void damage(float amount);
 	float angle = 0;
 private:
 	float _speed = 10;
+	float _health = 100;
+	Vector2 _scale;
 };
 
 #endif

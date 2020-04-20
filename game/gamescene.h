@@ -12,6 +12,7 @@ class GameScene : public Scene
 public:
 	GameScene();
 	virtual void update();
+	void updateGame();
 
 private:
 	std::vector<Ghost*> ghosts;

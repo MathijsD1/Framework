@@ -24,3 +24,13 @@ void Player::lookTowardsMousePosition()
 
 	this->rotation = dir.getAngle();
 }
+
+void Player::damage(float amount) {
+	_health -= amount;
+}
+
+void Player::reset() 
+{
+	_health = 100;
+	score = 0;
+}
