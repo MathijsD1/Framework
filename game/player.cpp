@@ -7,7 +7,7 @@ Player::Player()
 	this->scale = Vector2(0.05f, 0.05f);
 	this->rotation = 0;
 
-	this->addSprite("assets/Player.tga", 1);
+	this->addSprite("assets/Player.tga", 3);
 }
 
 void Player::update() {
@@ -19,6 +19,8 @@ void Player::lookTowardsMousePosition()
 {
 	Vector2 dir = this->position - Input::getInstance()->getMouseLocation();
 	dir.normalize();
+
+	angle = dir.getAngle() * RAD_TO_DEG;
 
 	this->rotation = dir.getAngle();
 }

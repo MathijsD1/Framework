@@ -11,6 +11,7 @@ class Player : public Actor
 public:
 	Player();
 	virtual void update();
+	float angle = 0;
 private:
 	void lookTowardsMousePosition();
 };
